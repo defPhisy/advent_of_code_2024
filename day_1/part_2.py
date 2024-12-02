@@ -1,7 +1,9 @@
 from part_1 import get_lines, split_lists, FILE
 
 
-def main():
+def main() -> None:
+    """Calculate the total similarity between two lists of numbers."""
+
     lines = get_lines(FILE)
     left_numbers, right_numbers = split_lists(lines)
 
@@ -16,8 +18,8 @@ def main():
         similarity = num * multiplicand
         total_similarity += similarity
 
-    print(total_similarity)
     # CORRECT RESULT = 26800609
+    print(total_similarity)
 
 
 if __name__ == "__main__":
